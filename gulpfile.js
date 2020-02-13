@@ -87,7 +87,7 @@ function criticalCss() {
 // gulp.task('scripts', scripts)
 gulp.task('watch', watch);
 gulp.task('clean', clean);
-gulp.task('crititcal-css', criticalCss);
+gulp.task('critical-css', criticalCss);
 gulp.task('build', gulp.series(clean,
                                   gulp.parallel(styles, scripts, image)))
 gulp.task('dev', gulp.series('build', 'watch'))

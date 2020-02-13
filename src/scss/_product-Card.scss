@@ -140,7 +140,6 @@
     &__bottom {
       display: flex;
       flex-wrap: nowrap;
-      // margin-top: 15px;
       @include media-breakpoint-up(lg) {
         margin-top: 30px;
       }

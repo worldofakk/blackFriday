@@ -18,11 +18,12 @@
           @include font(400, 10px, $whiteText);
           margin: 0px;
           @include media-breakpoint-up(md) {
+            padding: 0 30px;
             font-size: 19px;
             text-align: left;
           }
-          .navigation-menu_item_icon_wrapper {
-            margin-bottom: 10px;
+          .navigation-menu_item_icon-wrapper {
+            margin-bottom: 5px;
             @include media-breakpoint-up(md) {
               margin-right: 12px;
             }

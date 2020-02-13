@@ -15,7 +15,7 @@
 
   let timer = new Countdown({
     cont: document.querySelector('.timer'),
-    date: Date.now() + 10000 * 60 * 2,
+    date: Date.now() + 1000 * 60 * 2,
     outputTranslation: {
         day: 'Days',
         hour: 'Hours',
@@ -58,21 +58,25 @@
 // Modal-navigation
 (function() {
   let modalNavigation = {};
-  let activeClass = 'modal-navigation--active';
+  let activeClass = 'd-block';
   let modal = document.querySelector('.modal-navigation');
-  let openButton = document.querySelector('.open');
-  let closeButton = document.querySelector('.close');
+  let openButton = document.querySelector('.header__burger__open-havigation');
+  let closeButton = document.querySelector('.close-button');
 
   modalNavigation.open = function() {
     modal.classList.add(activeClass);
+
+
+    
   }
 
   modalNavigation.close = function() {
     modal.classList.remove(activeClass);
+
   }
 
-  // openButton.addEventListener('click', modalNavigation.open);
-  // closeButton.addEventListener('click', modalNavigation.close);
+  openButton.addEventListener('click', modalNavigation.open);
+  closeButton.addEventListener('click', modalNavigation.close);
 })();
 
 

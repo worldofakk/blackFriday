@@ -1,0 +1,107 @@
+.black-friday {
+    background: url(./../img/bannerBackgound.png) center;
+    background-size: cover;
+    margin: 0 auto;
+    padding-top: 90px;
+    overflow: hidden;
+    @include media-breakpoint-up(md) {
+      padding-top: 128px;
+    }
+    &__main {
+      text-align: center;
+      &__title {
+        $h1-height: 70px;
+        $discount-height: 30px;
+        $h1-margin: 5px;
+        $total-height: $h1-height + $discount-height + $h1-margin;
+        height: 105px;
+        padding-left: 10px;
+        background: url(./../img/black_middle.png) repeat-x;
+        background-size: contain;
+        text-transform: uppercase;
+        position: relative;
+        color: $whiteText;
+        letter-spacing: 1px;
+        @include media-breakpoint-up(md) {
+          height: 167px;
+          padding-top: 0px;
+        }
+  
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          height: $total-height;
+          width: $total-height * 0.98;
+          @include media-breakpoint-up(md) {
+            height: 167px;
+            width: 163px;
+          }
+        }
+        &:before {
+          right: 100%;
+          background: url(./../img/black_left.png) no-repeat right;
+          background-size: contain;
+        }
+        &:after {
+          left: 100%;
+          background: url(./../img/black_right.png) no-repeat left;
+          background-size: contain;
+        }
+        h1 {
+          font-weight: 700;
+          font-size: 31px;
+          line-height: 1;
+          margin-bottom: $h1-margin;
+          padding-top: 20px;
+          letter-spacing: 2px;
+          @include media-breakpoint-up(md) {
+            font-size: 63px;
+            line-height: 86px;
+            letter-spacing: 5px;
+          }
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1;
+          margin-bottom: 13px;
+          padding-top: 25px;
+          @include media-breakpoint-up(md) {
+            font-size: 30px;
+            padding-top: 17px;
+          }
+        }
+      }
+  
+      &__discount {
+        @include font(700, 31px, $redText);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 20px;
+  
+        @include media-breakpoint-up(md) {
+          font-size: 65px;
+          margin-top: 33px;
+        }
+      }
+    }
+    &__description__mobile,
+    &__description__desktop {
+      margin-top: 40px;
+      line-height: 21px;
+      margin-bottom: 25px;
+      text-align: center;
+      @include font(400, 10px, $whiteText);
+  
+      @include media-breakpoint-up(sm) {
+        font-size: 12px;
+        margin-top: 51px;
+      }
+      @include media-breakpoint-up(md) {
+        font-size: 14px;
+      }
+    }
+  }

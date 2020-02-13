@@ -1,0 +1,87 @@
+.timer {
+  margin-top: 60px;
+  @include media-breakpoint-down(xs) {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .countDown_cont {
+    font-family: Roboto;
+    font-size: 32px;
+    color: $whiteText;
+    @include media-breakpoint-down(xs) {
+      font-size: 16px;
+    }
+  }
+  .countDown_interval_basic_cont_description {
+    text-transform: uppercase;
+    @include font(400, 12px, $whiteText);
+    @include media-breakpoint-down(xs) {
+      font-size: 10px;
+    }
+  }
+  .countDown_digit_cont {
+    height: 60px;
+    width: 45px;
+    @include media-breakpoint-down(xs) {
+      height: 30px;
+      width: 22px;
+    }
+    
+  }
+  .countDown_digit_last_rotate,
+  .countDown_digit_last_placeholder_inner,
+  .countDown_digit_new_placeholder {
+    line-height: 60px;
+    @include media-breakpoint-down(xs) {
+      line-height: 30px;
+    }
+  }
+
+  .countDown_digit_cont:nth-child(n+1):not(:last-child) {
+    margin-right: 5px;
+  }
+  .countDown_digit_new_placeholder,
+  .countDown_digit_last_rotate,
+  .countDown_digit_new_rotated, 
+  .countDown_digit_new_rotate,
+  .countDown_digit_last_placeholder {
+    background: url(./../img/counter.png) no-repeat;
+    background-size: 100% 200%;
+    border-radius: 0;
+  }
+
+  .countDown_digit_last_placeholder {
+    background-position: bottom;
+  }
+
+  .countDown_digit_new_rotated {
+    background-position: bottom;
+  }  
+
+  .countDown__interval_basic_cont {
+    margin-right: 30px;
+    
+    &:last-of-type {
+      margin-right: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-right: 13px;
+    }
+  }
+  .countDown_interval_cont:nth-child(n+1):not(:last-child) {
+    margin-right: 0;
+  }
+  .countDown_interval_basic_cont_description {
+    margin-top: 11px;
+    display: flex;
+    justify-content: center;
+  }
+  .countDown_digit_cont, .countDown_digit_last_rotate,
+  .countDown_digit_new_rotate{
+    font-weight: 300;
+  }
+}
+
+

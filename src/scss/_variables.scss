@@ -1,0 +1,10 @@
+@mixin font($font-weight, $font-size, $color) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    color: $color;
+  }
+  
+  $whiteText: #ffffff;
+  $redText: #ff3838;
+  $strongGrayText: #333333;
+  $lightGrayText: #666666;

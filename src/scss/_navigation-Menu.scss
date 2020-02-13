@@ -1,0 +1,44 @@
+.navigation-menu {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.575);
+    padding: 0;
+    @include media-breakpoint-up(md) {
+      margin-top: 45px;
+    }
+    &__item {
+      text-align: center;
+      width: 20%;
+      padding-top: 15px;
+      padding-bottom: 10px;
+      cursor: pointer;
+      .navigation-menu_item_anchor {
+          padding: 0 5px;
+          text-decoration: none;
+          @include font(400, 10px, $whiteText);
+          margin: 0px;
+          @include media-breakpoint-up(md) {
+            font-size: 19px;
+            text-align: left;
+          }
+          .navigation-menu_item_icon_wrapper {
+            margin-bottom: 10px;
+            @include media-breakpoint-up(md) {
+              margin-right: 12px;
+            }
+          }
+          @include media-breakpoint-up(md) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+          }
+      }
+      @include media-breakpoint-up(md) {
+        &:hover {
+          background-color: #222222;
+        }
+      }
+     
+    }
+  }
